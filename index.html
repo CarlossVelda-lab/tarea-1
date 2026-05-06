@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen2 Translator | GitHub Pages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <main class="container">
+        <header>
+            <div class="title-container">
+                <h1>Universal <span>Translator</span></h1>
+                <div class="badge">Qwen2-0.5B</div>
+            </div>
+            <p class="subtitle">AI-powered local translation to Portuguese running entirely in your browser.</p>
+        </header>
+
+        <section class="status-panel">
+            <div id="status-indicator" class="indicator disconnected"></div>
+            <p id="status-text">Loading WebLLM Engine...</p>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="translator-card">
+            <div class="input-section">
+                <label for="input-text">Source Text (Any Language)</label>
+                <textarea id="input-text" placeholder="Type your text here..." rows="4"></textarea>
+                
+                <div class="examples">
+                    <span>Try examples:</span>
+                    <button class="example-btn">I like soccer</button>
+                    <button class="example-btn">How are you?</button>
+                    <button class="example-btn">What time is it?</button>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="translate-btn" class="primary-btn" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
+                    Translate
+                </button>
+            </div>
+
+            <div class="output-section">
+                <label for="output-text">Portuguese Translation</label>
+                <textarea id="output-text" placeholder="Translation will appear here..." rows="4" readonly></textarea>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
